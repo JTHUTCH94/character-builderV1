@@ -1,0 +1,102 @@
+.App {
+  text-align: center;
+  height: 100%;
+}
+
+.character-form{
+  display: block;
+  border: solid 1px black;
+  width: 800px;
+  height: 800px;
+  text-align: center;
+  background: linear-gradient(white, grey, white);
+  margin: auto;
+  border-radius: 25px;
+  margin-top: 50px;
+}
+
+ul {
+  position: fixed;
+  top: 0;
+  width: 800px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  border-radius: 25px;
+}
+
+li {
+  float: left;
+  border-right: 1px solid #bbb;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+
+li .showList{
+  float: right;
+}
+
+.builder{
+  display: block;
+  margin: auto;
+  margin-top: 80px;
+  height: 600px;
+  width: 500px;
+  border: 1px solid black;
+  background: #333;
+  color: white;
+  border-radius: 25px;
+}
+
+.builder-choices{
+  display: block;
+  border: 1px solid white;
+  margin: auto;
+  width: 300px;
+  border-radius: 25px;
+  padding: 5px;
+}
+
+.choice{
+  margin-right: 10px;
+  margin-left: 5px;
+}
+
+
+.bio{
+  display: block;
+  border: 1px solid white;
+  width: 300px;
+  height: 200px;
+  margin: auto;
+  margin-top: 30px;
+  border-radius: 25px;
+  padding: 10px;
+}
+
+.text-field{
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  width: 280px;
+}
+
+.text-label{
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  width: 280px;
+}
