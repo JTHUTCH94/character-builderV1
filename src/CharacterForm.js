@@ -5,8 +5,6 @@ import Builder from './components/Builder';
 import Torch1 from './components/Torch1';
 import Torch2 from './components/Torch2';
 
-import './components/Torch.css';
-
 class CharacterForm extends Component {
   render() {
     return (

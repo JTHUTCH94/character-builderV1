@@ -13,6 +13,7 @@ export default function Torch1(){
         </div>
         <label className="torch-handle1"></label>
         <p className="torch-grip1"></p>
+        <p className="wallmount1"></p>
         </div>
     )
 }

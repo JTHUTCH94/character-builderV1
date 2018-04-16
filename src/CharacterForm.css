@@ -9,7 +9,7 @@
   width: 600px;
   height: 750px;
   text-align: center;
-  background: linear-gradient(white, grey, white);
+  background: linear-gradient(grey, darkgray, grey);
   margin: auto;
   border-radius: 25px;
   margin-top: 50px;
@@ -109,10 +109,6 @@ li .showList{
   margin: auto;
   border-radius: 25px;
   margin-top: 50px;
-}
-
-body{
-  background:black;
 }
 
 .flame1{
@@ -276,4 +272,30 @@ body{
   border-bottom: solid 2px grey;
     border-top: solid 1px grey;
     border-radius: 5px;
+}
+
+.wallmount1{
+  display: block;
+  height: 70px;
+  width: 50px;
+  background: radial-gradient(silver, grey, silver);
+  border: solid 1px darkgrey;
+  border-radius: 15px;
+  z-index: -1;
+  position: absolute;
+  left: 74.5px;
+  bottom: 125px;
+}
+
+.wallmount2{
+  display: block;
+  height: 70px;
+  width: 50px;
+  background: radial-gradient(silver, grey, silver);
+  border: solid 1px darkgrey;
+  border-radius: 15px;
+  z-index: -1;
+  position: absolute;
+  right: 72.5px;
+  bottom: 125px;
 }
