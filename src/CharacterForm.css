@@ -7,7 +7,7 @@
   display: block;
   border: solid 1px black;
   width: 600px;
-  height: 750px;
+  height: 900px;
   text-align: center;
   background: linear-gradient(grey, darkgray, grey);
   margin: auto;
@@ -53,7 +53,7 @@ li .showList{
   display: block;
   margin: auto;
   margin-top: 50px;
-  height: 650px;
+  height: 800px;
   width: 500px;
   border: 1px solid black;
   background: #333;
@@ -65,16 +65,16 @@ li .showList{
   display: block;
   border: 1px solid white;
   margin: auto;
-  width: 300px;
+  margin-top: 10px;
+  width: 150px;
   border-radius: 25px;
   padding: 5px;
 }
 
-.choice{
-  margin-right: 10px;
-  margin-left: 5px;
+.options{
+  margin-bottom: 10px;
+  margin-top: 5px;
 }
-
 
 .bio{
   display: block;

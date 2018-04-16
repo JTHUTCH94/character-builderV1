@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Class from './Class.js';
-import Race from './Race.js';
-import Weapon from './Weapon.js';
+import Class from './Class';
+import Race from './Race';
+import Weapon from './Weapon';
 import Background from './Background';
 import Save from './Save';
 
