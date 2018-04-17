@@ -6,15 +6,29 @@ const options = [
 ];
 const defaultOption = options[0];
 
+export default class Class extends React.Component {
+  constructor(){
+  super();
+  this.state = {
+    class: ''
+  }
+  }
 
-export default function Class() {
+  setClass(options){
+    this.setState({
+      class: {options} 
+    });
+  }
+
+  render(){
     return (
       <div className="builder-choices">
         <h4>Character Class</h4>
-        <Dropdown options={options} value="[***]" className="options"/>
+        <Dropdown options={options} value="[***]" className="options" onChange={options => this.setClass(options)}/>
       </div>
     )
-}
+};
+};
 
 
 

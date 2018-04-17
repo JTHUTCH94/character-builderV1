@@ -7,13 +7,28 @@ const options = [
 const defaultOption = options[0];
 
 
-export default function Weapon() {
-    return (
-<div className="builder-choices">
+export default class Weapon extends React.Component {
+  constructor(){
+    super();
+    this.state = {
+      weapon: ''
+    }
+    }
+  
+    setWeapon(options){
+      this.setState({
+        weapon: {options} 
+      });
+    }
+    render(){
+    return (  
+      <div className="builder-choices">
         <h4>Weapon Choice</h4>
-        <Dropdown options={options} value="[***]" className="options"/>
-      </div>    )
-}
+        <Dropdown options={options} value="[***]" className="options" onChange={options => this.setWeapon(options)}/>
+      </div>
+  )
+};
+};
 
 
 /*export default function Weapon() {

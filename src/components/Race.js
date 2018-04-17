@@ -9,14 +9,29 @@ const options = [
 const defaultOption = options[0];
 
 
-export default function Race() {
+export default class Race extends React.Component {
+  constructor(){
+  super();
+  this.state = {
+    race: ''
+  }
+  }
+
+  setRace(options){
+    this.setState({
+      race: {options}
+    });
+  }
+
+  render(){
     return (
       <div className="builder-choices">
         <h4>Character Race</h4>
-        <Dropdown options={options} value="[***]" className="options"/>
+        <Dropdown options={options} value="[***]" className="options" onChange={options => this.setRace(options)}/>
       </div>
     )
-}
+};
+};
 
 
 
