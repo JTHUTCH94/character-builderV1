@@ -299,3 +299,57 @@ li .showList{
   right: 72.5px;
   bottom: 125px;
 }
+
+.enter-label{
+  display: block;
+  height: 500px;
+  width: 400px;
+  background: black;
+  border: 5px solid black;
+  border-top-left-radius: 45px;
+  border-top-right-radius: 45px;
+  margin: auto;
+  position: absolute;
+  bottom: 0px;
+  right: 450px;
+}
+
+.enter{
+  position: absolute;
+  bottom: 250px;
+  right: 640px;
+  z-index: 2;
+  opacity: 0;
+}
+
+.flame3{
+  position: absolute;
+  right: 655px;
+  bottom: 240px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  transform-origin:center bottom;
+  animation-name: flicker;
+  animation-duration:3ms;
+  animation-delay:200ms;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  z-index:1;
+}
+
+.enter-sign{
+  display: block;
+  margin: auto;
+  position: absolute;
+  left: 420px;
+  top: 30px;
+  background: linear-gradient(to right, brown, tan, brown, tan, brown, tan);
+  border: 1px solid brown;
+  height: 50px;
+  width: 400px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 35px;
+}
