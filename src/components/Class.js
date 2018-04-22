@@ -1,7 +1,7 @@
 import React from 'react';
 import Dropdown from 'react-dropdown';
 
-const options = [
+/*const options = [
   'Cleric', 'Barbarian', 'Wizard'
 ];
 const defaultOption = options[0];
@@ -28,23 +28,35 @@ export default class Class extends React.Component {
       </div>
     )
 };
-};
+};*/
 
+export default class Class extends React.Component {
+  constructor(){
+  super();
+  
+  this.state = {
+    class: ''
+  }
+  }
+  
+  setClass(e){
+    this.setState({
+      class: e.target.value
+    });
+  }
+  
+  render(){
 
-
-/*export default function Class() {
-    return (
-      
+    return(
         <div className="class">
-        <h4>Choose your Class</h4>
+        <h3 className="title">Choose your Class</h3>
           <div className="builder-choices">
-            <input className="choice" type="radio" value="cleric" />
-            <label className="choice" >Cleric</label>
-            <input className="choice" type="radio" value="barbarian" />
-            <label className="choice" >Barbarian</label>
-            <input className="choice" type="radio" value="Wizard" />
-            <label className="choice" >Wizard</label>
+          <input className="choice" type="button" value="Cleric" onClick={e => this.setClass(e)}/>
+            <input className="choice" type="button" value="Barbarian" onClick={e => this.setClass(e)}/>
+            <input className="choice" type="button" value="Wizard" onClick={e => this.setClass(e)}/>
+            <div className="current-class">{this.state.class}</div>
           </div>
           </div>
     )
-}*/
+};
+};

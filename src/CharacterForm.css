@@ -7,12 +7,14 @@
   display: block;
   border: solid 1px black;
   width: 600px;
-  height: 900px;
   text-align: center;
-  background: linear-gradient(grey, darkgray, grey);
+  background-color: #6e5d39;
+  background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");  
   margin: auto;
-  border-radius: 25px;
+  border-radius: 100px;
   margin-top: 50px;
+  margin-bottom: 50px;
+  box-shadow: 5px 10px black;
 }
 
 ul {
@@ -23,18 +25,22 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
-  border-radius: 25px;
+  background-color: #c49e52d2;
+  background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");  border-radius: 100px;  border-radius: 25px;
+  border: 1px solid black;
 }
 
 li {
   float: left;
-  border-right: 1px solid #bbb;
+}
+
+.character-list{
+  float: right;
 }
 
 li a {
   display: block;
-  color: white;
+  color: black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -42,49 +48,183 @@ li a {
 
 /* Change the link color to #111 (black) on hover */
 li a:hover {
-  background-color: #111;
-}
-
-li .showList{
-  float: right;
+  background-color: #967b45d2;
+  background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");  border-radius: 100px;
 }
 
 .builder{
   display: block;
   margin: auto;
+  margin-bottom: 50px;
   margin-top: 50px;
-  height: 800px;
   width: 500px;
   border: 1px solid black;
-  background: #333;
-  color: white;
-  border-radius: 25px;
+  background-color: #c49e52d2;
+  background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");  border-radius: 100px;
+  padding-bottom: 30px;
 }
 
 .builder-choices{
   display: block;
-  border: 1px solid white;
   margin: auto;
-  margin-top: 10px;
-  width: 150px;
-  border-radius: 25px;
+  border-radius: 100px;
+  width: 300px;
+  height: 180px;
   padding: 5px;
+  box-shadow: 2px 6px black;
+  border: 1px solid #5c4d2f;
+  background-color: #857148;
+  background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
 }
 
-.options{
+
+.title{
+  display: block;
+  box-shadow: 2px 6px black;
+  border: 1px solid grey;
+  background-image: -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0)   6%, hsla(0,0%,100%, .1) 7.5%),
+  -webkit-repeating-linear-gradient(left, hsla(0,0%,  0%,0) 0%, hsla(0,0%,  0%,0)   4%, hsla(0,0%,  0%,.03) 4.5%),
+  -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 1.2%, hsla(0,0%,100%,.15) 2.2%),
+  
+  linear-gradient(180deg, hsl(0,0%,78%)  0%, 
+  hsl(0,0%,90%) 47%, 
+  hsl(0,0%,78%) 53%,
+  hsl(0,0%,70%)100%); width: 200px;
+  margin: auto;
+  margin-top: 10px;
   margin-bottom: 10px;
-  margin-top: 5px;
+  border-radius: 5px;
 }
+
+.current-race{
+  display: block;
+  height: 20px;
+  margin: auto;
+  margin-top: 20px;
+  box-shadow: 2px 6px black;
+  border: 1px solid grey;
+  border-radius: 25px;
+  background-image: -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0)   6%, hsla(0,0%,100%, .1) 7.5%),
+  -webkit-repeating-linear-gradient(left, hsla(0,0%,  0%,0) 0%, hsla(0,0%,  0%,0)   4%, hsla(0,0%,  0%,.03) 4.5%),
+  -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 1.2%, hsla(0,0%,100%,.15) 2.2%),
+  
+  linear-gradient(180deg, hsl(0,0%,78%)  0%, 
+  hsl(0,0%,90%) 47%, 
+  hsl(0,0%,78%) 53%,
+  hsl(0,0%,70%)100%); width: 100px;
+}
+
+.current-class{
+  display: block;
+  height: 20px;
+  margin: auto;
+  margin-top: 20px;
+  box-shadow: 2px 6px black;
+  border: 1px solid grey;
+  border-radius: 25px;
+  background-image: -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0)   6%, hsla(0,0%,100%, .1) 7.5%),
+  -webkit-repeating-linear-gradient(left, hsla(0,0%,  0%,0) 0%, hsla(0,0%,  0%,0)   4%, hsla(0,0%,  0%,.03) 4.5%),
+  -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 1.2%, hsla(0,0%,100%,.15) 2.2%),
+  
+  linear-gradient(180deg, hsl(0,0%,78%)  0%, 
+  hsl(0,0%,90%) 47%, 
+  hsl(0,0%,78%) 53%,
+  hsl(0,0%,70%)100%); width: 100px;
+}
+
+.current-weapon{
+  display: block;
+  height: 20px;
+  margin: auto;
+  margin-top: 20px;
+  box-shadow: 2px 6px black;
+  border: 1px solid grey;
+  border-radius: 25px;
+  background-image: -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0)   6%, hsla(0,0%,100%, .1) 7.5%),
+  -webkit-repeating-linear-gradient(left, hsla(0,0%,  0%,0) 0%, hsla(0,0%,  0%,0)   4%, hsla(0,0%,  0%,.03) 4.5%),
+  -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 1.2%, hsla(0,0%,100%,.15) 2.2%),
+  
+  linear-gradient(180deg, hsl(0,0%,78%)  0%, 
+  hsl(0,0%,90%) 47%, 
+  hsl(0,0%,78%) 53%,
+  hsl(0,0%,70%)100%); width: 100px;
+}
+
+.choice{
+  border: 1px solid white;
+  border-radius: 100px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 40px;
+  width: 80px;
+  height: 80px;
+  font-size: 15px;
+  box-shadow: 2px 6px black;
+  background-image: -webkit-radial-gradient(  50%   0%,  8% 50%, hsla(0,0%,100%,.5) 0%, hsla(0,0%,100%,0) 100%),
+  -webkit-radial-gradient(  50% 100%, 12% 50%, hsla(0,0%,100%,.6) 0%, hsla(0,0%,100%,0) 100%),
+  -webkit-radial-gradient(   0%  50%, 50%  7%, hsla(0,0%,100%,.5) 0%, hsla(0,0%,100%,0) 100%),
+  -webkit-radial-gradient( 100%  50%, 50%  5%, hsla(0,0%,100%,.5) 0%, hsla(0,0%,100%,0) 100%),
+  
+  -webkit-repeating-radial-gradient( 50% 50%, 100% 100%, hsla(0,0%,  0%,0) 0%, hsla(0,0%,  0%,0)   3%, hsla(0,0%,  0%,.1) 3.5%),
+  -webkit-repeating-radial-gradient( 50% 50%, 100% 100%, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0)   6%, hsla(0,0%,100%,.1) 7.5%),
+  -webkit-repeating-radial-gradient( 50% 50%, 100% 100%, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 1.2%, hsla(0,0%,100%,.2) 2.2%),
+  
+  -webkit-radial-gradient( 50% 50%, 200% 50%, hsla(0,0%,90%,1) 5%, hsla(0,0%,85%,1) 30%, hsla(0,0%,60%,1) 100%);}
 
 .bio{
   display: block;
-  border: 1px solid white;
-  width: 300px;
-  height: 200px;
   margin: auto;
-  margin-top: 30px;
-  border-radius: 25px;
-  padding: 10px;
+  margin-top: 10px;
+  border-radius: 100px;
+  width: 350px;
+  padding: 5px;
+  background-color: #857148;
+  background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
+  box-shadow: 2px 6px black;
+  border: 1px solid #5c4d2f;
+}
+
+.background-title{
+  display: block;
+  box-shadow: 2px 6px black;
+  border: 1px solid grey;
+  background-image: -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0)   6%, hsla(0,0%,100%, .1) 7.5%),
+  -webkit-repeating-linear-gradient(left, hsla(0,0%,  0%,0) 0%, hsla(0,0%,  0%,0)   4%, hsla(0,0%,  0%,.03) 4.5%),
+  -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 1.2%, hsla(0,0%,100%,.15) 2.2%),
+  
+  linear-gradient(180deg, hsl(0,0%,78%)  0%, 
+  hsl(0,0%,90%) 47%, 
+  hsl(0,0%,78%) 53%,
+  hsl(0,0%,70%)100%); width: 110px;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.submit-button{
+  display: block;
+  width: 100px;
+  height: 40px;
+  border-radius: 15px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.hide-form{
+  display: block;
+  width: 140px;
+  height: 40px;
+  border-radius: 15px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.show-form{
+  display: block;
+  width: 140px;
+  height: 40px;
+  border-radius: 15px;
+  margin: auto;
 }
 
 .text-field{
@@ -316,10 +456,12 @@ li .showList{
 
 .enter{
   position: absolute;
-  bottom: 250px;
-  right: 640px;
+  bottom: 210px;
+  right: 610px;
   z-index: 2;
   opacity: 0;
+  height: 120px;
+  width: 100px;
 }
 
 .flame3{
@@ -345,11 +487,12 @@ li .showList{
   position: absolute;
   left: 420px;
   top: 30px;
-  background: linear-gradient(to right, brown, tan, brown, tan, brown, tan);
-  border: 1px solid brown;
-  height: 50px;
+  background-color: #857148;
+  background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
+  box-shadow: 2px 6px black;
+  border: 1px solid #5c4d2f;  height: 50px;
   width: 400px;
-  padding: 5px;
+  padding-top: 10px;
   text-align: center;
   border-radius: 35px;
 }

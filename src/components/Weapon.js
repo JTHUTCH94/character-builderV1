@@ -1,11 +1,12 @@
 import React from 'react';
 import Dropdown from 'react-dropdown';
 
+
+/*
 const options = [
   'Mace', 'Battle-Axe', 'Staff'
 ];
 const defaultOption = options[0];
-
 
 export default class Weapon extends React.Component {
   constructor(){
@@ -20,6 +21,7 @@ export default class Weapon extends React.Component {
         weapon: {options} 
       });
     }
+
     render(){
     return (  
       <div className="builder-choices">
@@ -28,21 +30,34 @@ export default class Weapon extends React.Component {
       </div>
   )
 };
-};
+};*/
+export default class Weapon extends React.Component {
+  constructor(){
+  super();
+  
+  this.state = {
+    weapon: ''
+  }
+  }
+  
+  setWeapon(e){
+    this.setState({
+      weapon: e.target.value
+    });
+  }
 
+  render(){
 
-/*export default function Weapon() {
     return (
         <div className="weapon">
-        <h4>Choose your Weapon</h4>
+        <h3 className="title">Choose your Weapon</h3>
           <div className="builder-choices">
-            <input className="choice" type="radio" value="mace" />
-            <label className="choice" >Mace</label>
-            <input className="choice" type="radio" value="battle-axe" />
-            <label className="choice" >Battle-Axe</label>
-            <input className="choice" type="radio" value="Staff" />
-            <label className="choice" >Staff</label>
+          <input className="choice" type="button" value="Mace" onClick={e => this.setWeapon(e)}/>
+            <input className="choice" type="button" value="Axe" onClick={e => this.setWeapon(e)}/>
+            <input className="choice" type="button" value="Staff" onClick={e => this.setWeapon(e)}/>
+            <div className="current-weapon">{this.state.weapon}</div>
           </div>
           </div>
     )
-}*/
+};
+};

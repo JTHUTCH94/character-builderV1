@@ -3,7 +3,7 @@ import Dropdown from 'react-dropdown';
 
 
 
-const options = [
+/*const options = [
   'Human', 'Elf', 'Orc'
 ];
 const defaultOption = options[0];
@@ -31,18 +31,33 @@ export default class Race extends React.Component {
       </div>
     )
 };
-};
+};*/
 
+export default class Race extends React.Component {
+constructor(){
+super();
 
+this.state = {
+  race: ''
+}
+}
 
-/*<div className="race">
-        <h4>Choose your Race</h4>
+setRace(e){
+  this.setState({
+    race: e.target.value
+  });
+}
+
+render(){
+
+return(
+<div className="race">
+        <h3 className="title">Choose your Race</h3>
           <div className="builder-choices">
-            <input className="choice" type="radio" value="human" />
-            <label className="choice" >Human</label>
-            <input className="choice" type="radio" value="elf" />
-            <label className="choice" >Elf</label>
-            <input className="choice" type="radio" value="orc" />
-            <label className="choice" >Orc</label>
+            <input className="choice" type="button" value="Human" onClick={e => this.setRace(e)}/>
+            <input className="choice" type="button" value="Elf" onClick={e => this.setRace(e)}/>
+            <input className="choice" type="button" value="Orc" onClick={e => this.setRace(e)}/>
+            <div className="current-race">{this.state.race}</div>
           </div>
-          </div>*/
+          </div>)};
+};

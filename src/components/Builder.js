@@ -9,11 +9,13 @@ import Save from './Save';
 export default function Builder() {
     return (
         <form className="builder">
-            <h2>Build your character</h2>
+            <h2 className="title">Build your character</h2>
             <Race />
             <Class />
             <Weapon />
+            <br />
             <Background />
+            <br />
             <Save />
         </form>
     )
