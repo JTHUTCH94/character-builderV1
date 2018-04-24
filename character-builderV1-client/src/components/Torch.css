@@ -1,0 +1,191 @@
+.flame1{
+    position: absolute;
+    left: 70px;
+    bottom: 300px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    transform-origin:center bottom;
+    animation-name: flicker;
+    animation-duration:3ms;
+    animation-delay:200ms;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  
+  .flame2{
+    position: absolute;
+    right: 90px;
+    bottom: 300px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    transform-origin:center bottom;
+    animation-name: flicker;
+    animation-duration:3ms;
+    animation-delay:200ms;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  
+  .flame{
+    bottom:0;
+    position:absolute;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 50%;
+    transform:rotate(-45deg) scale(1.5,1.5);
+  }
+  
+  .yellow{
+    left:15px; 
+    width: 30px;
+    height: 30px;
+    background:gold;
+    box-shadow: 0px 0px 9px 4px gold;
+  }
+  
+  .orange{
+    left:10px; 
+    width: 40px;
+    height: 40px;
+    background:orange;
+    box-shadow: 0px 0px 9px 4px orange;
+  }
+  
+  .red{
+    left:5px;
+    width: 50px;
+    height: 50px;
+    background:OrangeRed;
+    box-shadow: 0px 0px 5px 4px OrangeRed;
+  }
+  
+  .white{
+    left:15px; 
+    bottom:-4px;
+    width: 30px;
+    height: 30px;
+    background:white;
+    box-shadow: 0px 0px 9px 4px white;
+  }
+  
+  .circle{
+    border-radius: 50%;
+    position:absolute;  
+  }
+  
+  .blue{
+    width: 10px;
+    height: 10px;
+    left:25px;
+    bottom:-25px; 
+    background: SlateBlue;
+    box-shadow: 0px 0px 15px 10px SlateBlue;
+  }
+  
+  .black{
+    width: 40px;
+    height: 40px;
+    left:10px;
+    bottom:-60px;  
+    background: black;
+    box-shadow: 0px 0px 15px 10px black;
+  }
+  
+  @keyframes flicker{
+    0%   {transform: rotate(-1deg);}
+    20%  {transform: rotate(1deg);}
+    40%  {transform: rotate(-1deg);}
+    60%  {transform: rotate(1deg) scaleY(1.04);}
+    80%  {transform: rotate(-2deg) scaleY(0.92);}
+    100% {transform: rotate(1deg);}
+  }
+  
+  .torch-handle1{
+    display: block;
+      width: 25px;
+      height: 200px;
+      background-color: #857148;
+      background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
+      border: 1px solid #5c4d2f;    border-bottom: solid 4px tan;
+      border-top: solid 5px darkslategray;
+      border-radius: 5px;
+      position: absolute;
+      bottom: 80px;
+      left: 88px;
+      
+  }
+  
+  .torch-handle2{
+    display: block;
+      width: 25px;
+      height: 200px;
+      background-color: #857148;
+      background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
+      border: 1px solid #5c4d2f;   
+      border-bottom: solid 4px tan;
+      border-top: solid 5px darkslategrey;
+      border-radius: 5px;
+      position: absolute;
+      bottom: 80px;
+      right: 86px;
+  }
+  
+  .torch-grip1{
+    display: block;
+    width: 25px;
+    height: 40px;
+    background: linear-gradient(to right,silver,grey, silver);
+    z-index: 1;
+    position: absolute;
+    bottom: 140px;
+    left: 88px;
+    border: 1px solid darkgray;
+    border-bottom: solid 2px grey;
+      border-top: solid 1px grey;
+      border-radius: 5px;
+  }
+  
+  .torch-grip2{
+    display: block;
+    width: 25px;
+    height: 40px;
+    background: linear-gradient(to right,silver,grey, silver);
+    z-index: 1;
+    position: absolute;
+    bottom: 140px;
+    right: 86px;
+    border: 1px solid darkgray;
+    border-bottom: solid 2px grey;
+      border-top: solid 1px grey;
+      border-radius: 5px;
+  }
+  
+  .wallmount1{
+    display: block;
+    height: 70px;
+    width: 50px;
+    background: radial-gradient(silver, grey, silver);
+    border: solid 1px darkgrey;
+    border-radius: 15px;
+    z-index: -1;
+    position: absolute;
+    left: 74.5px;
+    bottom: 125px;
+  }
+  
+  .wallmount2{
+    display: block;
+    height: 70px;
+    width: 50px;
+    background: radial-gradient(silver, grey, silver);
+    border: solid 1px darkgrey;
+    border-radius: 15px;
+    z-index: -1;
+    position: absolute;
+    right: 72.5px;
+    bottom: 125px;
+  }
