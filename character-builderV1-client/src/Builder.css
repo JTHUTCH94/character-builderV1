@@ -79,6 +79,7 @@
   margin-top: 10px;
   margin-bottom: 10px;
   border-radius: 5px;
+  text-align: center;
 }
 
 .current-race{
@@ -156,75 +157,14 @@
   
   -webkit-radial-gradient( 50% 50%, 200% 50%, hsla(0,0%,90%,1) 5%, hsla(0,0%,85%,1) 30%, hsla(0,0%,60%,1) 100%);}
 
-.bio{
-  display: block;
-  margin: auto;
-  margin-top: 10px;
-  border-radius: 100px;
-  width: 350px;
-  padding: 5px;
-  background-color: #857148;
-  background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
-  box-shadow: 2px 6px black;
-  border: 1px solid #5c4d2f;
+  .save-button{
+    height: 30px;
+    width: 60px;
+    border-radius: 25px;
+    margin-top: 40px;
 }
 
-.background-title{
-  display: block;
-  box-shadow: 2px 6px black;
-  border: 1px solid grey;
-  background-image: -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0)   6%, hsla(0,0%,100%, .1) 7.5%),
-  -webkit-repeating-linear-gradient(left, hsla(0,0%,  0%,0) 0%, hsla(0,0%,  0%,0)   4%, hsla(0,0%,  0%,.03) 4.5%),
-  -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 1.2%, hsla(0,0%,100%,.15) 2.2%),
-  
-  linear-gradient(180deg, hsl(0,0%,78%)  0%, 
-  hsl(0,0%,90%) 47%, 
-  hsl(0,0%,78%) 53%,
-  hsl(0,0%,70%)100%); width: 110px;
-  margin: auto;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-}
-.submit-button{
-  display: block;
-  width: 100px;
-  height: 40px;
-  border-radius: 15px;
-  margin: auto;
-  margin-top: 20px;
-}
 
-.hide-form{
-  display: block;
-  width: 140px;
-  height: 40px;
-  border-radius: 15px;
-  margin: auto;
-  margin-bottom: 20px;
-}
-
-.show-form{
-  display: block;
-  width: 140px;
-  height: 40px;
-  border-radius: 15px;
-  margin: auto;
-}
-
-.text-field{
-  display: block;
-  margin: auto;
-  margin-top: 10px;
-  width: 280px;
-}
-
-.text-label{
-  display: block;
-  margin: auto;
-  margin-top: 10px;
-  width: 280px;
-}
 
 .form-body{
   display: block;
@@ -236,197 +176,7 @@
   margin-top: 50px;
 }
 
-.flame1{
-  position: absolute;
-  left: 70px;
-  bottom: 300px;
-  display: block;
-  width: 40px;
-  height: 40px;
-  transform-origin:center bottom;
-  animation-name: flicker;
-  animation-duration:3ms;
-  animation-delay:200ms;
-  animation-timing-function: ease-in;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
 
-.flame2{
-  position: absolute;
-  right: 90px;
-  bottom: 300px;
-  display: block;
-  width: 40px;
-  height: 40px;
-  transform-origin:center bottom;
-  animation-name: flicker;
-  animation-duration:3ms;
-  animation-delay:200ms;
-  animation-timing-function: ease-in;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-.flame{
-  bottom:0;
-  position:absolute;
-  border-bottom-right-radius: 50%;
-  border-bottom-left-radius: 50%;
-  border-top-left-radius: 50%;
-  transform:rotate(-45deg) scale(1.5,1.5);
-}
-
-.yellow{
-  left:15px; 
-  width: 30px;
-  height: 30px;
-  background:gold;
-  box-shadow: 0px 0px 9px 4px gold;
-}
-
-.orange{
-  left:10px; 
-  width: 40px;
-  height: 40px;
-  background:orange;
-  box-shadow: 0px 0px 9px 4px orange;
-}
-
-.red{
-  left:5px;
-  width: 50px;
-  height: 50px;
-  background:OrangeRed;
-  box-shadow: 0px 0px 5px 4px OrangeRed;
-}
-
-.white{
-  left:15px; 
-  bottom:-4px;
-  width: 30px;
-  height: 30px;
-  background:white;
-  box-shadow: 0px 0px 9px 4px white;
-}
-
-.circle{
-  border-radius: 50%;
-  position:absolute;  
-}
-
-.blue{
-  width: 10px;
-  height: 10px;
-  left:25px;
-  bottom:-25px; 
-  background: SlateBlue;
-  box-shadow: 0px 0px 15px 10px SlateBlue;
-}
-
-.black{
-  width: 40px;
-  height: 40px;
-  left:10px;
-  bottom:-60px;  
-  background: black;
-  box-shadow: 0px 0px 15px 10px black;
-}
-
-@keyframes flicker{
-  0%   {transform: rotate(-1deg);}
-  20%  {transform: rotate(1deg);}
-  40%  {transform: rotate(-1deg);}
-  60%  {transform: rotate(1deg) scaleY(1.04);}
-  80%  {transform: rotate(-2deg) scaleY(0.92);}
-  100% {transform: rotate(1deg);}
-}
-
-.torch-handle1{
-  display: block;
-    width: 25px;
-    height: 200px;
-    background-color: #857148;
-    background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
-    border: 1px solid #5c4d2f;    border-bottom: solid 4px tan;
-    border-top: solid 5px darkslategray;
-    border-radius: 5px;
-    position: absolute;
-    bottom: 80px;
-    left: 88px;
-    
-}
-
-.torch-handle2{
-  display: block;
-    width: 25px;
-    height: 200px;
-    background-color: #857148;
-    background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
-    border: 1px solid #5c4d2f;   
-    border-bottom: solid 4px tan;
-    border-top: solid 5px darkslategrey;
-    border-radius: 5px;
-    position: absolute;
-    bottom: 80px;
-    right: 86px;
-}
-
-.torch-grip1{
-  display: block;
-  width: 25px;
-  height: 40px;
-  background: linear-gradient(to right,silver,grey, silver);
-  z-index: 1;
-  position: absolute;
-  bottom: 140px;
-  left: 88px;
-  border: 1px solid darkgray;
-  border-bottom: solid 2px grey;
-    border-top: solid 1px grey;
-    border-radius: 5px;
-}
-
-.torch-grip2{
-  display: block;
-  width: 25px;
-  height: 40px;
-  background: linear-gradient(to right,silver,grey, silver);
-  z-index: 1;
-  position: absolute;
-  bottom: 140px;
-  right: 86px;
-  border: 1px solid darkgray;
-  border-bottom: solid 2px grey;
-    border-top: solid 1px grey;
-    border-radius: 5px;
-}
-
-.wallmount1{
-  display: block;
-  height: 70px;
-  width: 50px;
-  background: radial-gradient(silver, grey, silver);
-  border: solid 1px darkgrey;
-  border-radius: 15px;
-  z-index: -1;
-  position: absolute;
-  left: 74.5px;
-  bottom: 125px;
-}
-
-.wallmount2{
-  display: block;
-  height: 70px;
-  width: 50px;
-  background: radial-gradient(silver, grey, silver);
-  border: solid 1px darkgrey;
-  border-radius: 15px;
-  z-index: -1;
-  position: absolute;
-  right: 72.5px;
-  bottom: 125px;
-}
 
 .enter-label{
   display: block;
@@ -508,24 +258,26 @@
   width: 150px;
   padding: 5px;
   border-radius: 15px;
+  box-shadow: 5px 5px black;
 }
 
 .character-list{
-  display: block;
-  margin: auto;
+  display: inline-block;
   width: 600px;
-  height: 800px;
   margin-bottom: 100px;
   margin-top: 50px;
   background-color: #6e5d39;
   border: 1px solid #5c4d2f;   
   background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");  
-  margin: auto;
   border-radius: 100px;
   box-shadow: 5px 10px black;
+  justify-content: center;
+  margin-left: 350px;
+  padding: 20px;
 }
 
 .character-display{
-  display: block;
+  display: inline-block;
   margin: auto;
+  align-content: center;
 }
