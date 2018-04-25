@@ -4,15 +4,15 @@ export const createCharacter = (newCharacter) => ({
     newCharacter
 });
 
-export const createCharacterAction = (newCharacter) => dispatch => {
+export const createCharacterAction = (e) => dispatch => {
     return fetch('http://localhost:8080/api/characters', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-            "name": this.newCharacter.name,
-            "race": this.newCharacter.race,
-            "class": this.newCharacter.class,
-            "weapon": this.newCharacter.weapon
+            "name": e.target.name.value,
+            "race": e.target.race.value,
+            "class":  e.target.class.value,
+            "weapon":  e.target.weapon.value
         })
         .then(res => res.json())
         .then(res => dispatch(createCharacter(res)))
