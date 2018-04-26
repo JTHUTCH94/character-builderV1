@@ -35,9 +35,8 @@
   display: block;
   margin: auto;
   border-radius: 100px;
-  width: 300px;
-  height: 180px;
-  padding: 5px;
+  width: 400px;
+  padding: 15px;
   box-shadow: 2px 6px black;
   border: 1px solid #5c4d2f;
   background-color: #857148;
@@ -55,11 +54,35 @@
   linear-gradient(180deg, hsl(0,0%,78%)  0%, 
   hsl(0,0%,90%) 47%, 
   hsl(0,0%,78%) 53%,
-  hsl(0,0%,70%)100%); width: 200px;
+  hsl(0,0%,70%)100%); 
+  width: 200px;
+  height: 30px;
   margin: auto;
   margin-top: 10px;
   margin-bottom: 10px;
   border-radius: 5px;
+  text-align: center;
+  font-size: 20px;
+  font-family: D;
+}
+
+.name-plate{
+  display: block;
+  box-shadow: 2px 6px black;
+  border: 1px solid grey;
+  background-image: -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0)   6%, hsla(0,0%,100%, .1) 7.5%),
+  -webkit-repeating-linear-gradient(left, hsla(0,0%,  0%,0) 0%, hsla(0,0%,  0%,0)   4%, hsla(0,0%,  0%,.03) 4.5%),
+  -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 1.2%, hsla(0,0%,100%,.15) 2.2%),
+  
+  linear-gradient(180deg, hsl(0,0%,78%)  0%, 
+  hsl(0,0%,90%) 47%, 
+  hsl(0,0%,78%) 53%,
+  hsl(0,0%,70%)100%);
+  width: 60px;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 15px;
   text-align: center;
 }
 
@@ -82,11 +105,11 @@
   text-align: center;
 }
 
-.current-race{
+.current-choice{
   display: block;
   height: 20px;
   margin: auto;
-  margin-top: 20px;
+  margin-top: 50px;
   box-shadow: 2px 6px black;
   border: 1px solid grey;
   border-radius: 25px;
@@ -97,43 +120,8 @@
   linear-gradient(180deg, hsl(0,0%,78%)  0%, 
   hsl(0,0%,90%) 47%, 
   hsl(0,0%,78%) 53%,
-  hsl(0,0%,70%)100%); width: 100px;
-}
-
-.current-class{
-  display: block;
-  height: 20px;
-  margin: auto;
-  margin-top: 20px;
-  box-shadow: 2px 6px black;
-  border: 1px solid grey;
-  border-radius: 25px;
-  background-image: -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0)   6%, hsla(0,0%,100%, .1) 7.5%),
-  -webkit-repeating-linear-gradient(left, hsla(0,0%,  0%,0) 0%, hsla(0,0%,  0%,0)   4%, hsla(0,0%,  0%,.03) 4.5%),
-  -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 1.2%, hsla(0,0%,100%,.15) 2.2%),
-  
-  linear-gradient(180deg, hsl(0,0%,78%)  0%, 
-  hsl(0,0%,90%) 47%, 
-  hsl(0,0%,78%) 53%,
-  hsl(0,0%,70%)100%); width: 100px;
-}
-
-.current-weapon{
-  display: block;
-  height: 20px;
-  margin: auto;
-  margin-top: 20px;
-  box-shadow: 2px 6px black;
-  border: 1px solid grey;
-  border-radius: 25px;
-  background-image: -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0)   6%, hsla(0,0%,100%, .1) 7.5%),
-  -webkit-repeating-linear-gradient(left, hsla(0,0%,  0%,0) 0%, hsla(0,0%,  0%,0)   4%, hsla(0,0%,  0%,.03) 4.5%),
-  -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 1.2%, hsla(0,0%,100%,.15) 2.2%),
-  
-  linear-gradient(180deg, hsl(0,0%,78%)  0%, 
-  hsl(0,0%,90%) 47%, 
-  hsl(0,0%,78%) 53%,
-  hsl(0,0%,70%)100%); width: 100px;
+  hsl(0,0%,70%)100%); 
+  width: 100px;
 }
 
 .choice{
@@ -141,10 +129,37 @@
   border-radius: 100px;
   margin-right: 10px;
   margin-left: 10px;
-  margin-top: 40px;
-  width: 30px;
-  height: 30px;
+  margin-top: 10px;
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+  opacity: 50;
+}
+
+.choice-label{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 30px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 100px;
   box-shadow: 2px 6px black;
+  background-image: -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0)   6%, hsla(0,0%,100%, .1) 7.5%),
+  -webkit-repeating-linear-gradient(left, hsla(0,0%,  0%,0) 0%, hsla(0,0%,  0%,0)   4%, hsla(0,0%,  0%,.03) 4.5%),
+  -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 1.2%, hsla(0,0%,100%,.15) 2.2%),
+  
+  linear-gradient(180deg, hsl(0,0%,78%)  0%, 
+  hsl(0,0%,90%) 47%, 
+  hsl(0,0%,78%) 53%,
+  hsl(0,0%,70%)100%);
+}
+
+.text-field{
+    width: 200px;
+    border-radius: 15px;
 }
 
 .save-button{
@@ -255,13 +270,13 @@
   display: inline-block;
   width: 600px;
   margin-bottom: 100px;
-  margin-top: 50px;
+  margin-top: 100px;
   background-color: #6e5d39;
-  border: 1px solid #5c4d2f;   
+  border: 1px solid black;   
   background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");  
   border-radius: 100px;
   box-shadow: 5px 10px black;
-  justify-content: center;
+  align-content: center;
   margin-left: 350px;
   padding: 20px;
 }
@@ -270,4 +285,23 @@
   display: inline-block;
   margin: auto;
   align-content: center;
+}
+
+.characters-title{
+  display: block;
+  box-shadow: 2px 6px black;
+  border: 1px solid grey;
+  background-image: -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0)   6%, hsla(0,0%,100%, .1) 7.5%),
+  -webkit-repeating-linear-gradient(left, hsla(0,0%,  0%,0) 0%, hsla(0,0%,  0%,0)   4%, hsla(0,0%,  0%,.03) 4.5%),
+  -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 1.2%, hsla(0,0%,100%,.15) 2.2%),
+  
+  linear-gradient(180deg, hsl(0,0%,78%)  0%, 
+  hsl(0,0%,90%) 47%, 
+  hsl(0,0%,78%) 53%,
+  hsl(0,0%,70%)100%); width: 200px;
+  margin-left: 185px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  text-align: center;
 }

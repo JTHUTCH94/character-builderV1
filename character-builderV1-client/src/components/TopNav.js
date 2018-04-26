@@ -1,5 +1,5 @@
 import React from 'react';
-import './TopNav.css';
+import '../css/TopNav.css';
 export default function TopNav(props) {
     return (
         <ul className="nav-bar" >

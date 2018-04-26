@@ -11,18 +11,17 @@ export const createCharacterAction = (e) => dispatch => {
         body: JSON.stringify({
             "name": e.target.name.value,
             "race": e.target.race.value,
-            "class":  e.target.class.value,
+            "classification": e.target.classification.value,
             "weapon":  e.target.weapon.value
-        })
+        })})
         .then(res => res.json())
         .then(res => dispatch(createCharacter(res)))
-    });
-};
+    };
 
 export const SET_NAME = 'SET_NAME';
-export const setName = (e) => ({
+export const setName = (name) => ({
     type: SET_NAME,
-    e
+    name
 });
 
 export const setNameAction = (e) => {
@@ -30,34 +29,54 @@ export const setNameAction = (e) => {
 }
 
 export const SET_RACE = 'SET_RACE';
-export const setRace = (e) => ({
+export const setRace = (race) => ({
     type: SET_RACE,
-    e
+    race
 });
 
 export const setRaceAction = (e) => {
     this.props.dispatch(setRace(e.target.value));
 };
 
-export const SET_CLASS = 'SET_CLASS';
-export const setClass = (e) => ({
-    type: SET_CLASS,
-    e
+export const SET_CLASSIFICATION = 'SET_CLASSIFICATION';
+export const setClassification = (classification) => ({
+    type: SET_CLASSIFICATION,
+    classification
 });
 
-export const setClassAction = (e) => {
-    this.props.dispatch(setClass(e.target.value));
+export const setClassificationAction = (e) => {
+    this.props.dispatch(setClassification(e.target.value));
 };
 
 export const SET_WEAPON = 'SET_WEAPON';
-export const setWeapon = (e) => ({
+export const setWeapon = (weapon) => ({
     type: SET_WEAPON,
-    e
+    weapon
 });
 
 export const setWeaponAction = (e) => {
     this.props.dispatch(setWeapon(e.target.value));
 }
+
+/*export const SET_BACKGROUND = 'SET_BACKGROUND';
+export const setBackground = (background) => ({
+    type: SET_BACKGROUND,
+    background
+});
+
+export const setBackgroundAction = (e) => {
+    this.props.dispatch(setBackground(e.target.value));
+}
+
+export const SET_APPEARANCE = 'SET_APPEARANCE';
+export const setAppearance = (appearance) => ({
+    type: SET_APPEARANCE,
+    appearance
+});
+
+export const setAppearanceAction = (e) => {
+    this.props.dispatch(setAppearance(e.target.value));
+}*/
 
 export const SET_DISPLAY = 'SET_DISPLAY';
 export const setDisplay = (e) => ({
@@ -84,6 +103,9 @@ export const getCharactersAction = (characters) => dispatch => {
     })
         .then(res => res.json())
         .then(res => dispatch(getCharacters(res)));
+    this.setState ={
+            display: 'characters'
+        };
 }
 
 export const DELETE_CHARACTER = 'DELETE_CHARACTER';
@@ -102,7 +124,16 @@ export const deleteCharacterAction = (id) => dispatch =>{
 }
 
 /*export const UPDATE_CHARACTER = 'UPDATE_CHARACTER';
-export const updateCharacter = (character) => ({
+export const updateCharacter = (id) => ({
     type: UPDATE_CHARACTER,
-    character
-});*/
+    id
+});
+
+export const updateCharacterAction = (id) => dispatch =>{
+
+    return fetch('http://localhost:8080/api/characters/' + id, {
+        method: 'PUT'
+    })
+    .then(res => dispatch(updateCharacter(id)))
+    .catch(err => console.log(err));
+}*/

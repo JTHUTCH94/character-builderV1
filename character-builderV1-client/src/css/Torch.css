@@ -110,13 +110,15 @@
       height: 200px;
       background-color: #857148;
       background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
-      border: 1px solid #5c4d2f;    border-bottom: solid 4px tan;
+      border: 1px solid #5c4d2f;  
+      border-bottom: solid 4px tan;
       border-top: solid 5px darkslategray;
       border-radius: 5px;
       position: absolute;
       bottom: 80px;
       left: 88px;
-      
+      border-top-right-radius: 25px;
+      border-top-left-radius: 25px;
   }
   
   .torch-handle2{
@@ -132,6 +134,8 @@
       position: absolute;
       bottom: 80px;
       right: 86px;
+      border-top-right-radius: 25px;
+      border-top-left-radius: 25px;
   }
   
   .torch-grip1{
