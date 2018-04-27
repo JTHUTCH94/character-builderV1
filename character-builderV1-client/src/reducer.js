@@ -1,4 +1,4 @@
-import { CREATE_CHARACTER, GET_CHARACTERS, DELETE_CHARACTER, SET_NAME, SET_RACE, SET_CLASSIFICATION, SET_WEAPON, SET_DISPLAY } from './actions';
+import { CREATE_CHARACTER, GET_CHARACTERS, DELETE_CHARACTER, SET_NAME, SET_RACE, SET_CLASSIFICATION, SET_WEAPON, SET_DISPLAY, ENTER_PAGE, UPDATE_CHARACTER } from './actions';
 
 const initialState = {
     characters: [],
@@ -7,8 +7,6 @@ const initialState = {
     race: '',
     classification: '',
     weapon: '',
-    background: '',
-    appearance: ''
 };
 
 export default (state = initialState, action) => {
@@ -17,9 +15,7 @@ export default (state = initialState, action) => {
             name: state.name,
             race: state.race,
             classification: state.classification,
-            weapon: state.weapon,
-            background: state.background,
-            appearance: state.appearance
+            weapon: state.weapon
         });
     } else if(action.type === SET_NAME){
         return Object.assign({}, state, {
@@ -49,6 +45,10 @@ export default (state = initialState, action) => {
         return Object.assign({}, state, {
             display: 'new-character'
         });
+    } else if(action.type === ENTER_PAGE){
+        return Object.assign({}, state, {
+            display: 'form'
+        });
     } else if (action.type === GET_CHARACTERS){
         return Object.assign({}, state, {
             characters: action.characters,
@@ -58,7 +58,7 @@ export default (state = initialState, action) => {
         return Object.assign({}, state, {
             characters: state.characters.filter(character => character.id !== action.id)
         });
-    } /*else if(action.type === UPDATE_CHARACTER){
+    } else if(action.type === UPDATE_CHARACTER){
         return Object.assign({
             display: 'update',
             name: action.name,
@@ -66,6 +66,6 @@ export default (state = initialState, action) => {
             classification: action.classification,
             weapon: action.weapon
         });
-    }*/
+    }
     return state;
 };

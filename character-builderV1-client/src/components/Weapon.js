@@ -1,6 +1,7 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-export default function Weapon(props) {
+function Weapon(props) {
   return (
     <div className="weapon">
       <h3 className="title">Choose your Weapon</h3>
@@ -28,3 +29,9 @@ export default function Weapon(props) {
     </div>
   )
 }
+
+const mapStateToProps = (store) => ({
+  weapon: store.weapon
+});
+
+export default connect(mapStateToProps)(Weapon);

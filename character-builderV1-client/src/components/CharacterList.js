@@ -1,5 +1,5 @@
 import React from 'react';
-import { deleteCharacterAction } from '../actions';
+import { deleteCharacterAction, updateCharacterAction } from '../actions';
 import { connect } from 'react-redux';
 
 function CharacterList(props) {
@@ -11,6 +11,7 @@ function CharacterList(props) {
             <p>{character.classification}</p>
             <p>{character.weapon}</p>
             <button onClick={(e) => { console.log('it worked'); props.dispatch(deleteCharacterAction(character.id))}} >Delete</button>
+            <button onClick={(e) => props.dispatch(updateCharacterAction(character.id))} >Update</button>
         </li>))
 
     return (

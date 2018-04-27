@@ -1,6 +1,7 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-export default function Race(props) {
+function Race(props) {
 
 return(
 <div className="race">
@@ -28,3 +29,9 @@ return(
 </div>
 </div>)
 }
+
+const mapStateToProps = (store) => ({
+    race: store.race
+});
+
+export default connect(mapStateToProps)(Race);

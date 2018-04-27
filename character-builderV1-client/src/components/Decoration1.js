@@ -5,7 +5,9 @@ export default function Decoration1(){
     return (
         <div>
         <div className="window1"> 
-            <label className="window-frame1"></label>
+            <label className="window-frame1">
+            <p></p>
+            </label>
         </div>
         <div className="banner1">
             <label className="banner-rod1">

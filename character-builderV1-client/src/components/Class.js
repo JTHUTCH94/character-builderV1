@@ -1,6 +1,7 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-export default function Class(props){
+function Class(props){
   return (
     <div className="class">
     <h3 className="title">Choose your Classification</h3>
@@ -27,3 +28,9 @@ export default function Class(props){
 </div>
   )
 }
+
+const mapStateToProps = (store) => ({
+    classification: store.classification
+});
+
+export default connect(mapStateToProps)(Class);

@@ -90,6 +90,18 @@ export const setDisplayAction = (e) => {
     });
 }
 
+export const ENTER_PAGE = 'ENTER_PAGE';
+export const enterPage = (e) => ({
+    type: ENTER_PAGE,
+    e
+});
+
+export const enterPageAction = (e) => {
+    this.setState({
+        display: 'form'
+    });
+}
+
 export const GET_CHARACTERS = 'GET_CHARACTERS';
 export const getCharacters = (characters) => ({
     type: GET_CHARACTERS,
@@ -123,7 +135,7 @@ export const deleteCharacterAction = (id) => dispatch =>{
     .catch(err => console.log(err));
 }
 
-/*export const UPDATE_CHARACTER = 'UPDATE_CHARACTER';
+export const UPDATE_CHARACTER = 'UPDATE_CHARACTER';
 export const updateCharacter = (id) => ({
     type: UPDATE_CHARACTER,
     id
@@ -136,4 +148,4 @@ export const updateCharacterAction = (id) => dispatch =>{
     })
     .then(res => dispatch(updateCharacter(id)))
     .catch(err => console.log(err));
-}*/
+}
