@@ -136,6 +136,18 @@
   opacity: 50;
 }
 
+.choice-label:hover {
+  background-color: white;
+  opacity: 25%;
+}
+
+.choice-label:active {
+  background-color: white;
+  opacity: 50%;
+  box-shadow: 10 5px black;
+  transform: translateY(4px);
+}
+
 .choice-label{
   display: inline-block;
   width: 50px;
@@ -277,7 +289,7 @@
   border-radius: 100px;
   box-shadow: 5px 10px black;
   align-content: center;
-  margin-left: 350px;
+  margin-left: 320px;
   padding: 20px;
 }
 

@@ -12,7 +12,9 @@ import TopNav from './components/TopNav';
 import Torch1 from './components/Torch1';
 import Torch2 from './components/Torch2';
 import './css/Torch.css';
-import { createCharacterAction, getCharactersAction, setName, setRace, setClassification, setWeapon, setDisplay, deleteCharacterAction, setBackground, setAppearance } from './actions';
+import Decoration1 from './components/Decoration1';
+import Decoration2 from './components/Decoration2';
+import { createCharacterAction, getCharactersAction, setName, setRace, setClassification, setWeapon, setDisplay } from './actions';
 
 
 class Builder extends React.Component {
@@ -23,6 +25,7 @@ class Builder extends React.Component {
             return (
                 <div className="character-form">
                     <TopNav onClick={e => { e.preventDefault(); this.props.dispatch(getCharactersAction(e)) }} />
+                    <Decoration1 />
                     <Torch1 />
                     <form className="builder" onSubmit={(e) => { e.preventDefault(); this.props.dispatch(setDisplay(e)); this.props.dispatch(createCharacterAction(e)) }}>
                     <h2 className="title">Build your character</h2>
@@ -34,24 +37,29 @@ class Builder extends React.Component {
                         
                     </form>
                     <Torch2 />
+                    <Decoration2 />
                 </div>
             )
         } else if (this.props.display === 'new-character') {
             return (
                 <div className="new-character">
                     <TopNav onClick={e => { e.preventDefault(); this.props.dispatch(getCharactersAction(e)) }} />
+                    <Decoration1 />
                     <Torch1 />
                     <CharacterCard />
                     <Torch2 />
+                    <Decoration2 />
                 </div>
             );
         } else if (this.props.display === "characters") {
             return (
                 <div className="character-list">
+                    <Decoration1 />
                     <Torch1 />
                     <TopNav onClick={e => { e.preventDefault(); this.props.dispatch(getCharactersAction(e)) }} />
                     <CharacterList characters={this.props.characters}/>
                     <Torch2 />
+                    <Decoration2 />
                 </div>
             )
         }
