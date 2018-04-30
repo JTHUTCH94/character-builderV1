@@ -1,4 +1,4 @@
-import { CREATE_CHARACTER, GET_CHARACTERS, DELETE_CHARACTER, SET_NAME, SET_RACE, SET_CLASSIFICATION, SET_WEAPON, SET_DISPLAY, ENTER_PAGE, UPDATE_CHARACTER } from './actions';
+import { CREATE_CHARACTER, GET_CHARACTERS, DELETE_CHARACTER, SET_NAME, SET_RACE, SET_CLASSIFICATION, SET_WEAPON, SET_DISPLAY, UPDATE_CHARACTER, SET_UPDATE } from './actions';
 
 const initialState = {
     characters: [],
@@ -12,10 +12,10 @@ const initialState = {
 export default (state = initialState, action) => {
     if(action.type === CREATE_CHARACTER) {
         return Object.assign({}, state, {
-            name: state.name,
-            race: state.race,
-            classification: state.classification,
-            weapon: state.weapon
+            name: action.newCharacter.name,
+            race: action.newCharacter.race,
+            classification: action.newCharacter.classification,
+            weapon: action.newCharacter.weapon
         });
     } else if(action.type === SET_NAME){
         return Object.assign({}, state, {
@@ -45,9 +45,14 @@ export default (state = initialState, action) => {
         return Object.assign({}, state, {
             display: 'new-character'
         });
-    } else if(action.type === ENTER_PAGE){
+    } else if (action.type === SET_UPDATE){
         return Object.assign({}, state, {
-            display: 'form'
+            display: 'update',
+            name: action.character.name,
+            race: action.character.race,
+            classification: action.character.classification,
+            weapon: action.character.weapon,
+            id: action.character.id
         });
     } else if (action.type === GET_CHARACTERS){
         return Object.assign({}, state, {
@@ -59,13 +64,14 @@ export default (state = initialState, action) => {
             characters: state.characters.filter(character => character.id !== action.id)
         });
     } else if(action.type === UPDATE_CHARACTER){
+        console.log(action.updatedCharacter.name);
         return Object.assign({
-            display: 'update',
-            name: action.name,
-            race: action.race,
-            classification: action.classification,
-            weapon: action.weapon
+            display: 'updated-character',
+            name: action.updatedCharacter.name,
+            race: action.updatedCharacter.race,
+            classification: action.updatedCharacter.classification,
+            weapon: action.updatedCharacter.weapon
         });
-    }
+    } 
     return state;
 };

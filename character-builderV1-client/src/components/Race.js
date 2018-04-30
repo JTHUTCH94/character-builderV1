@@ -23,7 +23,7 @@ return(
         <input className="choice" type="radio" value="Dwarf" name="race" onChange={e => props.onChange(e)} />
         Dwarf</label>
     <label className="choice-label">
-        <input className="choice" type="radio" value="Golem" name="race" onChange={e => props.onChange(e)} />
+        <input className="choice" type="radio" defaultChecked={ props.race ==='Golem' } value="Golem" name="race" onChange={e => props.onChange(e)} />
         Golem</label>
     <div className="current-choice">{props.race}</div>
 </div>

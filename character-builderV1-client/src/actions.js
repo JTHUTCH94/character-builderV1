@@ -12,11 +12,12 @@ export const createCharacterAction = (e) => dispatch => {
             "name": e.target.name.value,
             "race": e.target.race.value,
             "classification": e.target.classification.value,
-            "weapon":  e.target.weapon.value
-        })})
+            "weapon": e.target.weapon.value
+        })
+    })
         .then(res => res.json())
         .then(res => dispatch(createCharacter(res)))
-    };
+};
 
 export const SET_NAME = 'SET_NAME';
 export const setName = (name) => ({
@@ -79,28 +80,9 @@ export const setAppearanceAction = (e) => {
 }*/
 
 export const SET_DISPLAY = 'SET_DISPLAY';
-export const setDisplay = (e) => ({
-    type: SET_DISPLAY,
-    e
+export const setDisplay = () => ({
+    type: SET_DISPLAY
 });
-
-export const setDisplayAction = (e) => {
-    this.setState({
-        display: 'new-character'
-    });
-}
-
-export const ENTER_PAGE = 'ENTER_PAGE';
-export const enterPage = (e) => ({
-    type: ENTER_PAGE,
-    e
-});
-
-export const enterPageAction = (e) => {
-    this.setState({
-        display: 'form'
-    });
-}
 
 export const GET_CHARACTERS = 'GET_CHARACTERS';
 export const getCharacters = (characters) => ({
@@ -115,9 +97,6 @@ export const getCharactersAction = (characters) => dispatch => {
     })
         .then(res => res.json())
         .then(res => dispatch(getCharacters(res)));
-    this.setState ={
-            display: 'characters'
-        };
 }
 
 export const DELETE_CHARACTER = 'DELETE_CHARACTER';
@@ -126,26 +105,41 @@ export const deleteCharacter = (id) => ({
     id
 });
 
-export const deleteCharacterAction = (id) => dispatch =>{
+export const deleteCharacterAction = (id) => dispatch => {
 
     return fetch('http://localhost:8080/api/characters/' + id, {
         method: 'DELETE'
     })
-    .then(res => dispatch(deleteCharacter(id)))
-    .catch(err => console.log(err));
+        .then(res => dispatch(deleteCharacter(id)))
+        .catch(err => console.log(err));
 }
 
-export const UPDATE_CHARACTER = 'UPDATE_CHARACTER';
-export const updateCharacter = (id) => ({
-    type: UPDATE_CHARACTER,
-    id
+export const SET_UPDATE = 'SET_UPDATE';
+export const setUpdate = (character) => ({
+    type: SET_UPDATE,
+    character
 });
 
-export const updateCharacterAction = (id) => dispatch =>{
+export const UPDATE_CHARACTER = 'UPDATE_CHARACTER';
+export const updateCharacter = (updatedCharacter) => ({
+    type: UPDATE_CHARACTER,
+    updatedCharacter
+});
+
+export const updateCharacterAction = (id) => (dispatch, getState) => {
+    const state = getState();
 
     return fetch('http://localhost:8080/api/characters/' + id, {
-        method: 'PUT'
+        method: 'PUT',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+            "name": state.name,
+            "race": state.race,
+            "classification": state.classification,
+            "weapon": state.weapon
+        })
     })
-    .then(res => dispatch(updateCharacter(id)))
-    .catch(err => console.log(err));
+        .then(res => res.json())
+        .then(updatedCharacter => dispatch(updateCharacter(updatedCharacter)))
+        .catch(err => console.log(err));
 }

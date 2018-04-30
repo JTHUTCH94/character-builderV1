@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-function CharacterCard(props){
+function UpdatedCharacterCard(props){
     console.log(props);
     return (
         <div className="character-card">
@@ -24,4 +24,4 @@ const mapStateToProps = (state) => ({
     weapon: state.weapon
 });
 
-export default connect(mapStateToProps)(CharacterCard);
+export default connect(mapStateToProps)(UpdatedCharacterCard);

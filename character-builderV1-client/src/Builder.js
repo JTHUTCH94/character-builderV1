@@ -7,15 +7,16 @@ import Weapon from './components/Weapon';
 import CharacterCard from './components/CharacterCard';
 import CharacterList from './components/CharacterList';
 import UpdateForm from './components/UpdateForm';
+import UpdatedCharacterCard from './components/UpdatedCharacter';
 import Name from './components/Name';
 import './css/Builder.css';
 import TopNav from './components/TopNav';
-import Torch1 from './components/Torch1';
+/*import Torch1 from './components/Torch1';
 import Torch2 from './components/Torch2';
 import './css/Torch.css';
 import Decoration1 from './components/Decoration1';
-import Decoration2 from './components/Decoration2';
-import { createCharacterAction, getCharactersAction, setName, setRace, setClassification, setWeapon, setDisplay, enterPage } from './actions';
+import Decoration2 from './components/Decoration2';*/
+import { createCharacterAction, getCharactersAction, setName, setRace, setClassification, setWeapon, setDisplay } from './actions';
 
 
 class Builder extends React.Component {
@@ -25,69 +26,62 @@ class Builder extends React.Component {
         if (this.props.display === 'form') {
             return (
                 <div className="character-form">
-                    <TopNav onClick={e => { e.preventDefault(); this.props.dispatch(getCharactersAction(e))}} />
-                    <Decoration1 />
-                    <Torch1 />
-                    <form className="builder" onSubmit={(e) => { e.preventDefault(); this.props.dispatch(setDisplay(e)); this.props.dispatch(createCharacterAction(e))}}>
-                    <h2 className="title">Build your character</h2>
-                        <Name onInput={e => this.props.dispatch(setName(e.target.value))}/>
+                    <TopNav onClick={e => { e.preventDefault(); this.props.dispatch(getCharactersAction(e)) }} />
+                    <form className="builder" onSubmit={(e) => { e.preventDefault(); this.props.dispatch(setDisplay()); this.props.dispatch(createCharacterAction(e)) }}>
+                        <h2 className="title">Build your character</h2>
+                        <Name onInput={e => this.props.dispatch(setName(e.target.value))} />
                         <Race onChange={e => this.props.dispatch(setRace(e.target.value))} />
                         <Class onChange={e => this.props.dispatch(setClassification(e.target.value))} />
                         <Weapon onChange={e => this.props.dispatch(setWeapon(e.target.value))} />
                         <input type="submit" value="Submit" className="save-button" />
-                        
+
                     </form>
-                    <Torch2 />
-                    <Decoration2 />
                 </div>
             )
         } else if (this.props.display === 'new-character') {
             return (
                 <div className="new-character">
                     <TopNav onClick={e => { e.preventDefault(); this.props.dispatch(getCharactersAction(e)) }} />
-                    <Torch1 />
                     <CharacterCard />
-                    <Torch2 />
                 </div>
             );
         } else if (this.props.display === "characters") {
             return (
                 <div className="character-list">
-                    <Decoration1 />
-                    <Torch1 />
                     <TopNav onClick={e => { e.preventDefault(); this.props.dispatch(getCharactersAction(e)) }} />
-                    <CharacterList characters={this.props.characters}/>
-                    <Torch2 />
-                    <Decoration2 />
+                    <CharacterList characters={this.props.characters} />
                 </div>
             )
-        }else if (this.props.display === 'update'){
+        } else if (this.props.display === 'update') {
             return (
                 <div className="update-form">
-                    <TopNav />
-                    <Decoration1 />
-                    <Torch1 />
-                    <UpdateForm onSubmit={e =>{ this.props.dispatch(createCharacterAction(e)); this.props.dispatch(setDisplay(e))}}/>
-                    <Torch2 />
-                    <Decoration2 />
+                    <TopNav onClick={e => { e.preventDefault(); this.props.dispatch(getCharactersAction(e)) }} />
+                    <UpdateForm />
                 </div>
             )
+        } else if (this.props.display === 'updated-character') {
+            return (
+                <div className="updated-character">
+                    <TopNav onClick={e => { e.preventDefault(); this.props.dispatch(getCharactersAction(e)) }} />
+                    <UpdatedCharacterCard />
+                </div>
+            );
         }
     };
 };
 
-const mapStateToProps = (store) => ({
-    characters: store.characters,
-    display: store.display,
-    name: store.name,
-    race: store.race,
-    classification: store.classification,
-    weapon: store.weapon
+const mapStateToProps = (state) => ({
+    characters: state.characters,
+    display: state.display,
+    name: state.name,
+    race: state.race,
+    classification: state.classification,
+    weapon: state.weapon
 });
 
 export default connect(mapStateToProps)(Builder);
 
-
+/**/
 /*<div className="race">
                             <h3 className="title">Choose your Race</h3>
                             <div className="builder-choices">
