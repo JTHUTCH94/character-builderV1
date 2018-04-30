@@ -12,6 +12,7 @@
     animation-timing-function: ease-in;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    z-index: -1;
   }
   
   .flame2{
@@ -28,6 +29,7 @@
     animation-timing-function: ease-in;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    z-index: -1;
   }
   
   .flame{
@@ -37,6 +39,7 @@
     border-bottom-left-radius: 50%;
     border-top-left-radius: 50%;
     transform:rotate(-45deg) scale(1.5,1.5);
+    z-index: -1;
   }
   
   .yellow{
@@ -45,6 +48,7 @@
     height: 30px;
     background:gold;
     box-shadow: 0px 0px 9px 4px gold;
+    z-index: -1;
   }
   
   .orange{
@@ -53,6 +57,7 @@
     height: 40px;
     background:orange;
     box-shadow: 0px 0px 9px 4px orange;
+    z-index: -1;
   }
   
   .red{
@@ -61,6 +66,7 @@
     height: 50px;
     background:OrangeRed;
     box-shadow: 0px 0px 5px 4px OrangeRed;
+    z-index: -1;
   }
   
   .white{
@@ -70,11 +76,13 @@
     height: 30px;
     background:white;
     box-shadow: 0px 0px 9px 4px white;
+    z-index: -1;
   }
   
   .circle{
     border-radius: 50%;
-    position:absolute;  
+    position:absolute;
+    z-index: -1;  
   }
   
   .blue{
@@ -84,15 +92,17 @@
     bottom:-25px; 
     background: SlateBlue;
     box-shadow: 0px 0px 15px 10px SlateBlue;
+    z-index: -1;
   }
   
   .black{
     width: 40px;
     height: 40px;
     left:10px;
-    bottom:-60px;  
+    bottom:-50px;  
     background: black;
     box-shadow: 0px 0px 15px 10px black;
+    z-index: -2;
   }
   
   @keyframes flicker{
@@ -119,6 +129,7 @@
       left: 88px;
       border-top-right-radius: 25px;
       border-top-left-radius: 25px;
+      z-index: -1;
   }
   
   .torch-handle2{
@@ -136,6 +147,7 @@
       right: 86px;
       border-top-right-radius: 25px;
       border-top-left-radius: 25px;
+      z-index: -1;
   }
   
   .torch-grip1{
@@ -143,7 +155,7 @@
     width: 25px;
     height: 40px;
     background: linear-gradient(to right,silver,grey, silver);
-    z-index: 1;
+    z-index: -2;
     position: absolute;
     bottom: 140px;
     left: 88px;
@@ -158,7 +170,7 @@
     width: 25px;
     height: 40px;
     background: linear-gradient(to right,silver,grey, silver);
-    z-index: 1;
+    z-index: -2;
     position: absolute;
     bottom: 140px;
     right: 86px;
@@ -175,7 +187,7 @@
     background: radial-gradient(silver, grey, silver);
     border: solid 1px darkgrey;
     border-radius: 15px;
-    z-index: -1;
+    z-index: -2;
     position: absolute;
     left: 74.5px;
     bottom: 125px;
@@ -188,7 +200,7 @@
     background: radial-gradient(silver, grey, silver);
     border: solid 1px darkgrey;
     border-radius: 15px;
-    z-index: -1;
+    z-index: -2;
     position: absolute;
     right: 72.5px;
     bottom: 125px;
