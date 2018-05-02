@@ -1,0 +1,12 @@
+.app-title{
+    display: block;
+    margin: auto;
+    text-align: center;
+    width: 40%;
+    size: 25px;
+    box-shadow: 2px 6px black;
+    border: 1px solid #5c4d2f;
+    background-color: #857148;
+    background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
+    border-radius: 25px;
+}

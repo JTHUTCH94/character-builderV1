@@ -1,9 +1,9 @@
 .nav-bar{
-    position: absolute;
+    position: relative;
+    display: block;
     top: 0;
-    width: 600px;
+    width: 50%;
     list-style-type: none;
-    margin-top: -100px;
     margin-bottom: 50px;
     margin: auto;
     padding: 0;
@@ -34,4 +34,45 @@
     background-color: #967b45d2;
     background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");  
     border-radius: 100px;
+  }
+
+  @media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    .nav-bar{
+      display: block;
+      width: 99%;
+      margin: auto;
+    }
+
+    li{
+      width: 40%;
+    }
+}
+
+  @media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+    .nav-bar{
+      display: block;
+      width: 100%;
+      margin: auto;
+      margin-top: 10px;
+      margin-bottom: 5px;
+    }
+}
+
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .nav-bar{
+      display: block;
+      width: 100%;
+      margin-top: 10px;
+    }
   }

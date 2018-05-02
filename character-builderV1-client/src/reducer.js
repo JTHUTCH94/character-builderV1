@@ -1,8 +1,8 @@
-import { CREATE_CHARACTER, GET_CHARACTERS, DELETE_CHARACTER, SET_NAME, SET_RACE, SET_CLASSIFICATION, SET_WEAPON, SET_DISPLAY, UPDATE_CHARACTER, SET_UPDATE } from './actions';
+import { ENTER_SCREEN, CREATE_CHARACTER, GET_CHARACTERS, DELETE_CHARACTER, SET_NAME, SET_RACE, SET_CLASSIFICATION, SET_WEAPON, SET_DISPLAY, UPDATE_CHARACTER, SET_UPDATE } from './actions';
 
 const initialState = {
     characters: [],
-    display: 'form',
+    display: 'enter-screen',
     name: '',
     race: '',
     classification: '',
@@ -10,7 +10,11 @@ const initialState = {
 };
 
 export default (state = initialState, action) => {
-    if(action.type === CREATE_CHARACTER) {
+    if(action.type === ENTER_SCREEN){
+        return Object.assign({}, state, {
+                display: 'form'
+            });
+    } else if(action.type === CREATE_CHARACTER) {
         return Object.assign({}, state, {
             name: action.newCharacter.name,
             race: action.newCharacter.race,

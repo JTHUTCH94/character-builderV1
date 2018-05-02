@@ -4,8 +4,8 @@ import { connect } from 'react-redux';
 function Weapon(props) {
   return (
     <div className="weapon" name="weapon-input">
-      <h3 className="title" name="weapon-input-title">Choose your Weapon</h3>
-      <div className="builder-choices" name="weapon-choices">
+      <fieldset className="builder-choices" name="weapon-choices">
+      <legend className="title" name="weapon-input-title">Choose your Weapon</legend>
         <label className="choice-label" htmlFor="weapon-choice">
           <input className="choice" type="radio" value="Mace" name="weapon" onChange={e => props.onChange(e)} />
           Mace</label>
@@ -25,7 +25,7 @@ function Weapon(props) {
           <input className="choice" type="radio" value="Dagger" name="weapon" onChange={e => props.onChange(e)} />
           Dagger</label>
         <div className="current-choice">{props.weapon}</div>
-      </div>
+      </fieldset>
     </div>
   )
 }

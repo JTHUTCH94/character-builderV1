@@ -5,8 +5,9 @@ function Race(props) {
 
 return(
 <div className="race" name="character-race-input">
-<h3 className="title" name="character-race-input-title">Choose your Race</h3>
-<div className="builder-choices" name="characer-race-input-choices">
+
+<fieldset className="builder-choices" name="characer-race-input-choices">
+<legend className="title" name="character-race-input-title">Choose your Race</legend>
     <label className="choice-label" htmlFor="race-choices">
         <input className="choice" type="radio" value="Human" name="race" onChange={e => props.onChange(e)} />
         Human </label>
@@ -26,7 +27,7 @@ return(
         <input className="choice" type="radio" value="Golem" name="race" onChange={e => props.onChange(e)} />
         Golem</label>
     <div className="current-choice">{props.race}</div>
-</div>
+</fieldset>
 </div>)
 }
 

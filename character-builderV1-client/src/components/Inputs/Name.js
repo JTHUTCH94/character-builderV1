@@ -4,8 +4,11 @@ import { connect } from 'react-redux';
 function Name(props) {
     return (
         <div>
-            <label className="name-plate">Name</label>
+            <label htmlFor="text-input" className="name-plate">
+            Name
+            <br />
             <input type="text" className="name" name="name" value={props.name} onChange={e => props.onInput(e)} />
+            </label>
         </div>
     )
 }

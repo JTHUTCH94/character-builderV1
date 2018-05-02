@@ -1,3 +1,55 @@
+.enter-screen{
+    display: block;
+    margin-top: 20px;
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 5px 10px black;
+    border: 1px solid #5c4d2f;
+    background-color: #857148;
+    background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
+    border-radius: 25px;
+}
+
+.info{
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+    display: block;
+    box-shadow: 2px 6px black;
+    border: 1px solid grey;
+    background-image: -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0)   6%, hsla(0,0%,100%, .1) 7.5%),
+    -webkit-repeating-linear-gradient(left, hsla(0,0%,  0%,0) 0%, hsla(0,0%,  0%,0)   4%, hsla(0,0%,  0%,.03) 4.5%),
+    -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 1.2%, hsla(0,0%,100%,.15) 2.2%),
+    
+    linear-gradient(180deg, hsl(0,0%,78%)  0%, 
+    hsl(0,0%,90%) 47%, 
+    hsl(0,0%,78%) 53%,
+    hsl(0,0%,70%)100%); 
+    border-radius: 15px;
+    margin-bottom: 30px;  
+}
+
+.enter-button{
+    display: block;
+    width: 40%;
+    margin: auto;
+    margin-top: 100px;
+    box-shadow: 2px 6px black;
+    border: 1px solid grey;
+    background-image: -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0)   6%, hsla(0,0%,100%, .1) 7.5%),
+    -webkit-repeating-linear-gradient(left, hsla(0,0%,  0%,0) 0%, hsla(0,0%,  0%,0)   4%, hsla(0,0%,  0%,.03) 4.5%),
+    -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 1.2%, hsla(0,0%,100%,.15) 2.2%),
+    
+    linear-gradient(180deg, hsl(0,0%,78%)  0%, 
+    hsl(0,0%,90%) 47%, 
+    hsl(0,0%,78%) 53%,
+    hsl(0,0%,70%)100%); 
+    border-radius: 15px;
+}
+
 .flame1{
     position: relative;
     display: block;
@@ -218,4 +270,58 @@
     width: 25%;
     margin: auto;
     align-content: center;
+  }
+  
+  @media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .enter-screen{
+      display: block;
+      width: 80%;
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
+}
+
+@media only screen 
+and (min-device-width: 414px) 
+and (max-device-width: 736px) 
+and (-webkit-min-device-pixel-ratio: 3) { 
+    .enter-screen{
+      display: block;
+      width: 80%;
+      margin-top: 40px;
+    }
+}
+
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .enter-screen{
+      display: block;
+      width: 80%;
+      margin-top: 250px;
+      height: 500px;
+    }
+
+    .enter-button{
+      display: block;
+      margin: auto;
+      width: 20%;
+      margin-top: 20px;
+      height: 50px;
+    }
+}
+
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .enter-screen{
+      display: block;
+      width: 80%;
+      margin-top: 20px;
+    }
   }

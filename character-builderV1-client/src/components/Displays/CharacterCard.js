@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import './CharacterCard.css';
 
 function CharacterCard(props) {
     console.log(props);
@@ -8,25 +9,25 @@ function CharacterCard(props) {
             <div className="character-name">
                 <label>
                     Name
-                        <h3>{props.name}</h3>
+                        <h1>{props.name}</h1>
                 </label>
             </div>
             <div className="character-race">
                 <label>
                     Race
-                        <h3>{props.race}</h3>
+                        <h1>{props.race}</h1>
                 </label>
             </div>
             <div className="character-classification">
                 <label>
                     Classification
-                        <h3>{props.classification}</h3>
+                        <h1>{props.classification}</h1>
                 </label>
             </div>
             <div className="character-weapon">
                 <label>
                     Weapon
-                        <h3>{props.weapon}</h3>
+                        <h1>{props.weapon}</h1>
                 </label>
             </div>
         </div>

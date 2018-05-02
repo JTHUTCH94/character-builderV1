@@ -1,5 +1,4 @@
 import React from 'react';
-import './Decoration.css';
 
 export default function Decoration2(){
     return (

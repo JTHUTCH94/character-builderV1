@@ -1,3 +1,9 @@
+export const ENTER_SCREEN = 'ENTER_SCREEN';
+export const enterScreen = () => ({
+    type: ENTER_SCREEN
+});
+
+
 export const CREATE_CHARACTER = 'CREATE_CHARACTER';
 export const createCharacter = (newCharacter) => ({
     type: CREATE_CHARACTER,

@@ -1,0 +1,203 @@
+.characters{
+    display: block;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    background-image: -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0)   6%, hsla(0,0%,100%, .1) 7.5%),
+    -webkit-repeating-linear-gradient(left, hsla(0,0%,  0%,0) 0%, hsla(0,0%,  0%,0)   4%, hsla(0,0%,  0%,.03) 4.5%),
+    -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 1.2%, hsla(0,0%,100%,.15) 2.2%),
+    
+    linear-gradient(180deg, hsl(0,0%,78%)  0%, 
+    hsl(0,0%,90%) 47%, 
+    hsl(0,0%,78%) 53%,
+    hsl(0,0%,70%)100%);
+    border: 1px solid black;
+    text-align: center;
+    width: 25%;
+    padding: 5px;
+    border-radius: 15px;
+    box-shadow: 5px 5px black;
+  }
+  
+  .character-page{
+    display: block;
+    margin: auto;
+    width: 60%;
+    text-align: center;
+  }
+  
+  .character-list{
+    display: inline-block;
+    width: 90%;
+    margin: auto;
+    margin-top: 100px;
+    background-color: #6e5d39;
+    border: 1px solid black;   
+    background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");  
+    border-radius: 100px;
+    box-shadow: 5px 10px black;
+    padding: 20px;
+    align-content: center;
+  }
+  
+  .character-display{
+    display: inline-block;
+    margin: auto;
+    margin-top: 10px;
+    border: 1px solid black;
+    background-color: #c49e52d2;
+    background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png"); 
+    border-radius: 100px;
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .characters-title{
+    display: block;
+    box-shadow: 2px 6px black;
+    border: 1px solid grey;
+    background-image: -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0)   6%, hsla(0,0%,100%, .1) 7.5%),
+    -webkit-repeating-linear-gradient(left, hsla(0,0%,  0%,0) 0%, hsla(0,0%,  0%,0)   4%, hsla(0,0%,  0%,.03) 4.5%),
+    -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 1.2%, hsla(0,0%,100%,.15) 2.2%),
+    
+    linear-gradient(180deg, hsl(0,0%,78%)  0%, 
+    hsl(0,0%,90%) 47%, 
+    hsl(0,0%,78%) 53%,
+    hsl(0,0%,70%)100%); 
+    width: 50%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin: auto;
+  }
+
+  .delete{
+    display: block;
+    width: 40%;
+    margin: auto;
+  }
+
+  .update{
+    display: block;
+    width: 40%;
+    margin: auto;
+  }
+
+  @media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .character-list{
+      display: block;
+      width: 90%;
+      margin-bottom: 20px;
+      margin-left: -5px;
+      margin-top: 20px;
+    }
+
+    .character-page{
+      display: block;
+      width: 90%;
+      margin: auto;
+    }
+
+    .character-display{
+      display: inline-block;
+      width: 60%;
+      margin: auto;
+    }
+
+    .characters{
+      display: block;
+      width: 95%;
+      margin: auto;
+      margin-bottom: 10px;
+    }
+
+    .characters-title{
+      display: block;
+      width: 90%;
+      margin: auto;
+      border-radius: 100px;
+    }
+}
+
+@media only screen 
+and (min-device-width: 414px) 
+and (max-device-width: 736px) 
+and (-webkit-min-device-pixel-ratio: 3) { 
+    .character-list{
+      display: block;
+      width: 90%;
+      margin: auto;
+    }
+
+    .character-display{
+      display: inline-block;
+      margin: auto;
+      width: 60%;
+    }
+
+    .characters{
+      display: inline-block;
+      width: 90%;
+      margin: auto;
+      margin-bottom: 10px;
+    }
+    .characters-title{
+      display: block;
+      width: 60%;
+      margin: auto;
+      margin-bottom: 10px;
+    }
+
+    .character-page{
+      display: block;
+      width: 90%;
+      margin: auto;
+    }
+}
+
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px)
+  and (-webkit-min-device-pixel-ratio: 2){
+    .character-page{
+      display: block;
+      width: 90%;
+    }
+
+    .character-list{
+      display: block;
+      width: 90%;
+      margin-top: 20px;
+    }
+
+    .character-display{
+      display: inline-block;
+      width: 90%;
+      margin: auto;
+    }
+
+    .characters{
+      display: inline-block;
+      width: 25%;
+      margin-right: 20px;
+    }
+  }
+
+  @media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    .character-page{
+      display: block;
+      width: 90%;
+    }
+
+    .character-list{
+      display: block;
+      width: 90%;
+      margin-top: 20px;
+    }
+  }

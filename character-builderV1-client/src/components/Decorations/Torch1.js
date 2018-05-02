@@ -1,5 +1,4 @@
 import React from 'react';
-import './Torch.css';
 
 export default function Torch1(){
     return (
