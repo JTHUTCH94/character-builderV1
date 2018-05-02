@@ -28,7 +28,7 @@ class Builder extends React.Component {
         } else if (this.props.display === 'form') {
             return (
                 <div className="create-form">
-                <TopNav onClick={e => { e.preventDefault(); this.props.dispatch(getCharactersAction(e)) }} />
+                <TopNav />
                     <div className="character-form">
                         <form className="builder" onSubmit={(e) => { e.preventDefault(); this.props.dispatch(setDisplay()); this.props.dispatch(createCharacterAction(e)) }}>
                             <h1 className="title">Build your character</h1>
@@ -44,28 +44,28 @@ class Builder extends React.Component {
         } else if (this.props.display === 'new-character') {
             return (
                 <div className="new-character">
-                    <TopNav onClick={e => { e.preventDefault(); this.props.dispatch(getCharactersAction(e)) }} />
+                    <TopNav />
                     <CharacterCard />
                 </div>
             );
         } else if (this.props.display === "characters") {
             return (
                 <div className="character-page">
-                    <TopNav onClick={e => { e.preventDefault(); this.props.dispatch(getCharactersAction(e)) }} />
+                    <TopNav />
                     <CharacterList characters={this.props.characters} />
                 </div>
             )
         } else if (this.props.display === 'update') {
             return (
                 <div className="update-form">
-                    <TopNav onClick={e => { e.preventDefault(); this.props.dispatch(getCharactersAction(e)) }} />
+                    <TopNav />
                     <UpdateForm />
                 </div>
             )
         } else if (this.props.display === 'updated-character') {
             return (
                 <div className="updated-character">
-                    <TopNav onClick={e => { e.preventDefault(); this.props.dispatch(getCharactersAction(e)) }} />
+                    <TopNav />
                     <UpdatedCharacterCard />
                 </div>
             );

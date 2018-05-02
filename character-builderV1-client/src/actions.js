@@ -3,6 +3,10 @@ export const enterScreen = () => ({
     type: ENTER_SCREEN
 });
 
+export const CREATE_FORM = 'CREATE_FORM';
+export const createForm = () =>({
+    type: CREATE_FORM
+});
 
 export const CREATE_CHARACTER = 'CREATE_CHARACTER';
 export const createCharacter = (newCharacter) => ({
