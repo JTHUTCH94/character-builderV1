@@ -324,4 +324,10 @@ and (-webkit-min-device-pixel-ratio: 3) {
       width: 80%;
       margin-top: 20px;
     }
+
+    .enter-button{
+      display: block;
+      width: 20%;
+      height: 50px;
+    }
   }
