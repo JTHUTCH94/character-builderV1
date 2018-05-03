@@ -10,7 +10,7 @@ export default function EnterScreen(props){
                 <h2>This is a fantasy character building application that lets you choose from a number of presets to build your hero. </h2> 
                 <h3>Click on the button below to begin your journey</h3>
             </div>
-            <input type="button" className="enter-button" value="Enter" onClick={e => props.onClick(e)} />
+            <button className="enter-button" value="Enter" onClick={e => props.onClick(e)} >Enter</button>
         </div>
     )
 }
